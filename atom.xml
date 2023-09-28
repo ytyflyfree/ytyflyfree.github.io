@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-28T08:16:15.692Z</updated>
+  <updated>2023-09-28T09:24:55.643Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://example.com/2023/09/28/jsstudy/"/>
     <id>http://example.com/2023/09/28/jsstudy/</id>
     <published>2023-09-28T08:11:26.000Z</published>
-    <updated>2023-09-28T08:16:15.692Z</updated>
+    <updated>2023-09-28T09:24:55.643Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>hello</strong></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="react-hooks"><a href="#react-hooks" class="headerlink" title="react hooks"></a>react hooks</h1><p>通过阅读博客，了解到几个有趣的用法</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;hello&lt;/strong&gt;&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;react-hooks&quot;&gt;&lt;a href=&quot;#react-hooks&quot; class=&quot;headerlink&quot; title=&quot;react hooks&quot;&gt;&lt;/a&gt;react hooks&lt;/h1&gt;&lt;p&gt;通过阅读博客，了解到几个有趣的用法&lt;/p&gt;
 </summary>
       
     
