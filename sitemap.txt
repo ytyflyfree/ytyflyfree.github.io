@@ -1,2 +1,4 @@
+http://example.com/2023/09/30/study/
 http://example.com/2023/09/28/jsstudy/
 http://example.com/
+http://example.com/tags/%E5%85%AB%E8%82%A1%E6%96%87/
