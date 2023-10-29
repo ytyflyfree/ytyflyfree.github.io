@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-02T06:31:53.177Z</updated>
+  <updated>2023-10-29T18:27:53.833Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,15 @@
     <link href="http://example.com/2023/10/02/%E7%A7%8B%E6%8B%9B%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
     <id>http://example.com/2023/10/02/%E7%A7%8B%E6%8B%9B%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/</id>
     <published>2023-10-02T06:31:53.000Z</published>
-    <updated>2023-10-02T06:31:53.177Z</updated>
+    <updated>2023-10-29T18:27:53.833Z</updated>
     
+    <content type="html"><![CDATA[<h1 id="看代码说输出"><a href="#看代码说输出" class="headerlink" title="看代码说输出"></a>看代码说输出</h1><p><code>async  function  async1()  &#123;         console.log(&#39;async1 start&#39;);         await  async2();         console.log(&#39;async1 end&#39;);</code><br><code>&#125;</code><br><code>async  function  async2()  &#123;         console.log(&#39;async2&#39;);</code><br><code>&#125;</code><br><code>console.log(&#39;script start&#39;);</code><br><code>setTimeout(function()  &#123;         console.log(&#39;setTimeout&#39;);</code><br><code>&#125;,  0);</code><br><code>async1();</code><br><code>new  Promise(function(resolve)  &#123;         console.log(&#39;promise1&#39;);         resolve();</code><br><code>&#125;).then(function()  &#123;         console.log(&#39;promise2&#39;);</code><br><code>&#125;);</code><br><code>console.log(&#39;script end&#39;);</code></p><p>首先，事件循环从宏任务（macrostack）队列开始，这个时候，宏任务队列中，只有一个 script (整体代码)任务。从宏任务队列中取出一个任务来执行。<br>首先执行 console.log(‘script start’)，输出 ‘script start’<br>遇到 setTimeout 把 console.log(‘setTimeout’) 放到 macrotask 队列中<br>执行 aync1() 输出 ‘async1 start’ 和 ‘async2’ ,把 console.log(‘async1 end’) 放到 micro 队列中<br>执行到 promise ，输出 ‘promise1’ ，把 console.log(‘promise2’) 放到  micro 队列中<br>执行 console.log(‘script end’)，输出 ‘script end’<br>macrotask 执行完成会执行 microtask ，把 microtask quene 里面的 microtask 全部拿出来一次性执行完，所以会输出 ‘async1 end’ 和 ‘promise2’<br>开始新一轮的事件循环，去除执行一个 macrotask 执行，所以会输出 ‘setTimeout’</p><p>这里的一个知识点 async 怎么样异步的，js运行在碰到await关键字时，会记录在哪里暂停执行。等到await右边的值可以使用了，就是处理完回调了，js会向消息列对中推送一个任务，这个任务会恢复异步函数的执行。这样的话，即使await后面跟着一个立即可用的值，函数的其余部分也会被异步求值。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;看代码说输出&quot;&gt;&lt;a href=&quot;#看代码说输出&quot; class=&quot;headerlink&quot; title=&quot;看代码说输出&quot;&gt;&lt;/a&gt;看代码说输出&lt;/h1&gt;&lt;p&gt;&lt;code&gt;async  function  async1()  &amp;#123;         consol</summary>
+      
     
     
     
